@@ -1,16 +1,21 @@
-// const arr = [];
-// console.log(arr.push('Element 1'));
-// console.log(arr);
+let students = ['Abby', 'Junha', 'Sastra', 'De Oka', 'Yastu', 'Zerina'];
 
-let students = ['Student 1', 'Student 2', 'Student 3'];
-console.log(
-	students.map((student) => {
-		return student.toUpperCase();
-	}),
-);
+let arrayAndFunctionSection = document.querySelector('#array-and-function');
+
+let studentList = arrayAndFunctionSection.querySelector('ul');
+
+const renderStudentButton = document.querySelector('#render-student-btn');
+
+renderStudentButton.addEventListener('click', () => {
+	studentList.innerHTML = students
+		.map((student) => {
+			return '<li>' + student + '</li>';
+		})
+		.join(''); // Join the array elements into a single string
+	console.log(studentList);
+});
 
 let value = 1;
-console.log(value);
 
 function myFunction(cb) {
 	cb();
@@ -19,5 +24,3 @@ function myFunction(cb) {
 myFunction(() => {
 	value = 10;
 });
-
-console.log(value);
