@@ -24,9 +24,22 @@ const buttonTimpa = body.querySelector('#timpa-text');
 buttonTimpa.addEventListener('click', () => {
 	timpa.classList.add('hidden');
 });
+
+// Menyimpan object form dengan name "sign-up-form"
+// Menyimpan object didalam sign-up-form dengan name "first-name"
+// Menyimpan object dengan id "error-first-name"
+// Menyimpan object dengan id "success-first-name"
+
+// Method onSubmit
+// Argument event ini merupakan sebuah object yang
+// berisikan informasi tentang "event".
+
+// preventDefault() ini untuk mencegah tindakan default
+// yaitu adalah mengirim sata ke server dan melakukan
+// refresh halaman.
+
 const signUpForm = document.forms['sign-up-form'];
 const firstNameInput = signUpForm['first-name'];
-const firtsNameValue = document.querySelector('#first-name-value');
 const errorFirstName = document.querySelector('#error-first-name');
 const successFirstName = document.querySelector('#success-first-name');
 
@@ -36,14 +49,3 @@ signUpForm.onsubmit = (event) => {
 		? (errorFirstName.innerText = 'First name tidak boleh kosong')
 		: (successFirstName.innerText = 'Oke, input diterima');
 };
-
-// firstNameInput.addEventListener('mouseover', () => {
-// 	firtsNameValue.innerText = firstNameInput.value;
-// });
-
-// firstNameInput.addEventListener('mouseout', () => {
-// 	firtsNameValue.innerText = 'Letakkan mouse pada atas input kembali';
-// });
-
-console.log(firstNameInput);
-console.log(firtsNameValue);
