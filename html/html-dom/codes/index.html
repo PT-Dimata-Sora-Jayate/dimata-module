@@ -5,14 +5,41 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>HTML DOM</title>
 		<link rel="stylesheet" href="./styles.css" />
+		<style>
+			body {
+				display: flex;
+				flex-direction: column;
+				row-gap: 1em;
+				padding: 1em;
+			}
+			.error {
+				color: red;
+			}
+			.success {
+				color: green;
+			}
+		</style>
 	</head>
 	<body>
 		<script src="./index.js" defer></script>
 		<p id="timpa" class="">INI AWAL</p>
-		<input id="printed" />
+		<!-- <input id="printed" /> -->
 		<button id="print-text">Print Text</button>
 		<button id="timpa-text">Timpa Text</button>
 
+		<form action="" name="sign-up-form">
+			<label for="first-name">First Name</label>
+			<input
+				type="text"
+				value="John Doe"
+				placeholder="Masukkan Nama"
+				id="first-name"
+				name="first-name"
+			/>
+			<p id="error-first-name" class="error"></p>
+			<p id="success-first-name" class="success"></p>
+		</form>
+		<p id="first-name-value"></p>
 		<!-- <script>
 			console.log('hello world from internal script');
 		</script> -->
