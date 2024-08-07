@@ -1,13 +1,5 @@
-// alert(test);
-
 // DRY -> Dont repeat yourself
 const body = document.body;
-
-// body.addEventListener('keypress', (event) => {
-// 	if (event.key === 'Enter') {
-// 		alert('BODY PRESS');
-// 	}
-// });
 
 const printText = body.querySelector('#print-text');
 
@@ -26,26 +18,45 @@ buttonTimpa.addEventListener('click', () => {
 });
 
 // Menyimpan object form dengan name "sign-up-form"
-// Menyimpan object didalam sign-up-form dengan name "first-name"
-// Menyimpan object dengan id "error-first-name"
-// Menyimpan object dengan id "success-first-name"
 
+const firstNameValue = document.querySelector('#first-name-value');
+
+console.log('[FIRST NAME VALUE]', firstNameValue);
+// Menyimpan object didalam sign-up-form dengan name "first-name"
+const signUpForm = document.forms['sign-up-form'];
+function validation(event) {
+	event.preventDefault();
+	firstNameInput.value.trim() === ''
+		? (firstNameValue.innerText = 'First name tidak boleh kosong')
+		: (firstNameValue.innerText = 'Oke, input diterima');
+}
+
+const firstNameInput = signUpForm['first-name'];
+const firstNameInputValue = firstNameInput.value;
+
+signUpForm.onsubmit = validation;
+
+// firstNameInput.addEventListener('mouseover', () => {
+// 	firstNameValue.innerText = firstNameInput.value;
+// });
+
+// firstNameInput.addEventListener('mouseout', () => {
+// 	firstNameValue.innerText = 'Letakkan cursor diatas input';
+// });
+
+// firstNameInput.addEventListener('input', () => {
+// 	firstNameValue.innerText = firstNameInput.value;
+// });
+// Menyimpan object dengan id "error-first-name"
+const errorFirstName = document.querySelector('#error-first-name');
+// Menyimpan object dengan id "success-first-name"
+const successFirstName = document.querySelector('#success-first-name');
 // Method onSubmit
 // Argument event ini merupakan sebuah object yang
 // berisikan informasi tentang "event".
-
 // preventDefault() ini untuk mencegah tindakan default
 // yaitu adalah mengirim sata ke server dan melakukan
 // refresh halaman.
+// signUpForm.onsubmit = (event) => {
 
-const signUpForm = document.forms['sign-up-form'];
-const firstNameInput = signUpForm['first-name'];
-const errorFirstName = document.querySelector('#error-first-name');
-const successFirstName = document.querySelector('#success-first-name');
-
-signUpForm.onsubmit = (event) => {
-	event.preventDefault();
-	firstNameInput.value.trim() === ''
-		? (errorFirstName.innerText = 'First name tidak boleh kosong')
-		: (successFirstName.innerText = 'Oke, input diterima');
-};
+// };
