@@ -24,6 +24,7 @@ const firstNameValue = document.querySelector('#first-name-value');
 console.log('[FIRST NAME VALUE]', firstNameValue);
 // Menyimpan object didalam sign-up-form dengan name "first-name"
 const signUpForm = document.forms['sign-up-form'];
+
 function validation(event) {
 	event.preventDefault();
 	firstNameInput.value.trim() === ''
