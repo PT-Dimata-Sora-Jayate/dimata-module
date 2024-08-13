@@ -18,3 +18,12 @@ console.log(numberVariable2);
 
 let stringVariable = 'Hello World';
 console.log(stringVariable);
+
+console.log('foo' + 1);
+
+console.log(Number('11'));
+
+//  truthy and falsy
+console.log(Boolean(0));
+console.log(Boolean(1));
+console.log(Boolean(' '));
