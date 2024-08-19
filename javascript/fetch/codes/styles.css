@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+}
+body #container {
+  border: 1px solid black;
+  padding: 1em;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1em;
+  align-items: center;
+  justify-content: center;
+}
+body #container > p:nth-child(1) {
+  color: red;
+}
+body #container > p:nth-last-child(1) {
+  color: yellow;
+}/*# sourceMappingURL=styles.css.map */
